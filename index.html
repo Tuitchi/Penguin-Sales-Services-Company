@@ -13,13 +13,13 @@
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="icon" type="image/x-icon" href="img/Penguin-Asia.png">
+    <link rel="icon" type="image/x-icon" href="img/Penguin-Asia.png">
 
 </head>
 
 <body class="bg-[#DFE3E3]">
     <header class="bg-[#1E1D1D] text-white shadow-md py-4 sticky top-0 z-50">
-        <div class="container mx-auto flex items-center px-6">
+        <div class="container mx-auto flex items-center px-6 justify-between">
             <div class="flex-shrink-0">
                 <a href="/" class="flex items-center space-x-4">
                     <img id="logo" class="w-20 transition-all duration-300 ease-in-out" src="img/Penguin-Asia.png"
@@ -27,60 +27,61 @@
                     <h1 class="text-2xl font-bold text-[#E3A262] hidden lg:block">Penguin Sales & Services Company</h1>
                 </a>
             </div>
-            <div class="flex-grow hidden lg:block ms-[5vw] xl:ms-[15vw] me-auto">
-                <form class="flex ">
-                    <input type="text" placeholder="Search..."
-                        class="w-80 px-4 py-2 rounded-l-full text-[#1E1D1D] focus:outline-none">
-                    <button type="submit" class="bg-white px-4 py-2 rounded-r-full text-[#1E1D1D] hover:bg-[#D6AB6C]">
-                        <i class='bx bx-search text-xl'></i>
-                    </button>
-                </form>
-            </div>
-            <div class="flex-shrink-0">
-                <nav>
-                    <ul class="flex space-x-6 text-[#D6AB6C]">
-                        <li class="relative group">
-                            <a href="services.html" class="hover:text-[#E3A262]">Services<i class='bx bx-caret-down'
-                                    style="color:#e3a262"></i></a>
-                            <ul
-                                class="absolute right-0 w-[400px] hidden bg-[#1E1D1D] text-white shadow-md rounded-md group-hover:block">
-                                <li><a href="bridal-car.html" class="block px-4 py-2 hover:bg-[#E3A262]">Bridal Car
-                                        Services</a></li>
-                                <li><a href="towing.html" class="block px-4 py-2 hover:bg-[#E3A262]">Towing Services 24/7</a>
-                                </li>
-                                <li><a href="trucking.html" class="block px-4 py-2 hover:bg-[#E3A262]">Trucking
-                                        Services</a></li>
-                                <li><a href="construction.html" class="block px-4 py-2 hover:bg-[#E3A262]">General
-                                        Construction & Maintenance</a></li>
-                                <li><a href="auto-parts.html" class="block px-4 py-2 hover:bg-[#E3A262]">Auto Parts</a>
-                                </li>
-                                <li><a href="heavy-equipment.html" class="block px-4 py-2 hover:bg-[#E3A262]">Heavy
-                                        Equipment Rental</a></li>
-                                <li><a href="furniture-hotel-residential.html"
-                                        class="block px-4 py-2 hover:bg-[#E3A262]">Furniture Hotel & Residential</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="about.html" class="hover:text-[#E3A262]">About</a></li>
-                        <li><a href="contact.html" class="bg-[#E3A262] p-2 px-4 rounded-full text-[#ffffff]"><i class='bx bxs-phone' style='color:#ffffff' ></i> Call Now</a></li>
-                    </ul>
-                </nav>
-            </div>
+
+            <!-- Burger Menu Button -->
+            <button id="menu-toggle" class="lg:hidden text-[#D6AB6C] text-3xl">
+                <i class='bx bx-menu'></i>
+            </button>
+
+            <nav class="hidden lg:flex space-x-6 text-[#D6AB6C]">
+                <ul class="flex space-x-6">
+                    <li class="relative group">
+                        <a href="services.html" class="hover:text-[#E3A262]">Services<i class='bx bx-caret-down'
+                                style="color:#e3a262"></i></a>
+                        <ul
+                            class="absolute right-0 w-[400px] hidden bg-[#1E1D1D] text-white shadow-md rounded-md group-hover:block">
+                            <li><a href="bridal-car.html" class="block px-4 py-2 hover:bg-[#E3A262]">Bridal Car
+                                    Services</a></li>
+                            <li><a href="towing.html" class="block px-4 py-2 hover:bg-[#E3A262]">Towing Services
+                                    24/7</a></li>
+                            <li><a href="trucking.html" class="block px-4 py-2 hover:bg-[#E3A262]">Trucking Services</a>
+                            </li>
+                            <li><a href="construction.html" class="block px-4 py-2 hover:bg-[#E3A262]">General
+                                    Construction & Maintenance</a></li>
+                            <li><a href="auto-parts.html" class="block px-4 py-2 hover:bg-[#E3A262]">Auto Parts</a></li>
+                            <li><a href="heavy-equipment.html" class="block px-4 py-2 hover:bg-[#E3A262]">Heavy
+                                    Equipment Rental</a></li>
+                            <li><a href="furniture-hotel-residential.html"
+                                    class="block px-4 py-2 hover:bg-[#E3A262]">Furniture Hotel & Residential</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html" class="hover:text-[#E3A262]">About</a></li>
+                    <li><a href="contact.html" class="bg-[#E3A262] p-2 px-4 rounded-full text-[#ffffff]"><i
+                                class='bx bxs-phone' style='color:#ffffff'></i> Call Now</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden lg:hidden bg-[#1E1D1D] text-[#D6AB6C] py-4 px-6 absolute w-full left-0 top-full shadow-md">
+            <ul class="space-y-4">
+                <li><a href="services.html" class="block hover:text-[#E3A262]">Services</a></li>
+                <li><a href="about.html" class="block hover:text-[#E3A262]">About</a></li>
+                <li><a href="contact.html"
+                        class="block bg-[#E3A262] p-2 px-4 rounded-full text-[#ffffff] text-center"><i
+                            class='bx bxs-phone' style='color:#ffffff'></i> Call Now</a></li>
+            </ul>
         </div>
     </header>
+
 
 
     <section class="text-white py-20 text-center h-screen"
         style="background-image: url(img/bg.jpg); background-repeat: no-repeat; background-size: cover; background-position:center ;">
         <div class="container m-auto px-6">
             <h2 class="text-[3em] font-bold font-[Sora] text-[#b59300]">Penguin Sales & Services Company</h2>
-            <p class="mt-4 text-lg font-light font-[Sora] text-[#1E1D1D]">Penguin Sales & Services Company is a dynamic company offering a
-                diverse range of services tailored to meet various needs. From luxurious bridal car services to reliable
-                towing solutions, efficient trucking, heavy equipment rental, and expert construction and maintenance,
-                Penguin Sales & Services Company ensures quality and professionalism in every service. Additionally, they provide furniture
-                for hotels and residences, as well as auto parts, catering to both individual and business requirements.
-                With a commitment to excellence, Penguin Sales & Services Company strives to make things happen for its clients.</p>
-            <form class="mt-[200px] flex justify-center">
+            <form class="m-10 flex justify-center">
                 <input type="text" placeholder="Search..."
                     class="w-full max-w-[60vw] px-4 py-3 rounded-l-full text-[#1E1D1D] focus:outline-none">
                 <button type="submit"
@@ -88,6 +89,12 @@
                     <i class='bx bx-search text-xl'></i>
                 </button>
             </form>
+            <p class="mt-4 text-lg text-justify font-[400] font-[Sora] text-[#1E1D1D] bg-white bg-opacity-70 p-4 rounded-lg">
+                Penguin Sales & Services Company is a dynamic company offering a diverse range of services tailored to meet various needs. 
+                From luxurious bridal car services to reliable towing solutions, efficient trucking, heavy equipment rental, and expert 
+                construction and maintenance, Penguin Sales & Services Company ensures quality and professionalism in every service. 
+                Additionally, they provide furniture for hotels and residences, as well as auto parts, catering to both individual and 
+                business requirements. With a commitment to excellence, Penguin Sales & Services Company strives to make things happen for its clients.</p>
         </div>
     </section>
     <footer class="bg-[#1E1D1D] text-[#D6AB6C] py-12">
