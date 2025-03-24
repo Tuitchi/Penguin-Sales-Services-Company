@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+nav {
+    font-family: "Sora", sans-serif;
+    font-size: medium;
+    font-weight: 500;
+}
+
+nav ul li a.active {
+    font-weight: bolder;
+}
+
+nav a:hover {
+    border-bottom: 3px solid #D6AB6C;
+}
+
+nav a.active {
+    border-bottom: 3px solid #D6AB6C;
+}
+
+
+body {
+    --sb-track-color: #000000;
+    --sb-thumb-color: #e3a262;
+    --sb-size: 10px;
+}
+
+body::-webkit-scrollbar {
+    width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 1px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 1px;
+
+}
+
+@supports not selector(::-webkit-scrollbar) {
+    body {
+        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
+}
+
+main a {
+    font-family: 'Sora', sans-serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: small;
+}
+
+#service h3 {
+    color:#ac731d
+}
