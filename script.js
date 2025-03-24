@@ -31,3 +31,9 @@ window.addEventListener('scroll', function () {
 document.getElementById("menu-toggle").addEventListener("click", function() {
     document.getElementById("mobile-menu").classList.toggle("hidden");
 });
+const servicesToggle = document.getElementById('mobile-services-toggle');
+const servicesMenu = document.getElementById('mobile-services-menu');
+
+servicesToggle.addEventListener('click', () => {
+    servicesMenu.classList.toggle('hidden');
+});

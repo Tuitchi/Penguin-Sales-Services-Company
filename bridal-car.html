@@ -13,13 +13,13 @@
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="icon" type="image/x-icon" href="img/Penguin-Asia.png">
+    <link rel="icon" type="image/x-icon" href="img/Penguin-Asia.png">
 
 </head>
 
 <body class="bg-[#DFE3E3]">
     <header class="bg-[#1E1D1D] text-white shadow-md py-4 sticky top-0 z-50">
-        <div class="container mx-auto flex items-center px-6">
+        <div class="container mx-auto flex items-center justify-between px-6">
             <div class="flex-shrink-0">
                 <a href="/" class="flex items-center space-x-4">
                     <img id="logo" class="w-20 transition-all duration-300 ease-in-out" src="img/Penguin-Asia.png"
@@ -27,45 +27,65 @@
                     <h1 class="text-2xl font-bold text-[#E3A262] hidden lg:block">Penguin Sales & Services Company</h1>
                 </a>
             </div>
-            <div class="flex-grow hidden lg:block ms-[5vw] xl:ms-[15vw] me-auto">
-                <form class="flex ">
-                    <input type="text" placeholder="Search..."
-                        class="w-80 px-4 py-2 rounded-l-full text-[#1E1D1D] focus:outline-none">
-                    <button type="submit" class="bg-white px-4 py-2 rounded-r-full text-[#1E1D1D] hover:bg-[#D6AB6C]">
-                        <i class='bx bx-search text-xl'></i>
+            <button id="menu-toggle" class="lg:hidden text-[#D6AB6C] text-3xl">
+                <i class='bx bx-menu'></i>
+            </button>
+            <nav id="desktop-menu" class="hidden lg:flex space-x-6 text-[#D6AB6C]">
+                <ul class="flex space-x-6">
+                    <li class="relative group">
+                        <a href="services.html" class="hover:text-[#E3A262]">Services<i class='bx bx-caret-down'
+                                style="color:#e3a262"></i></a>
+                        <ul
+                            class="absolute right-0 w-96 hidden bg-[#1E1D1D] text-white shadow-md rounded-md group-hover:block">
+                            <li><a href="bridal-car.html" class="block px-4 py-2 hover:bg-[#E3A262]">Bridal Car
+                                    Services</a></li>
+                            <li><a href="towing.html" class="block px-4 py-2 hover:bg-[#E3A262]">Towing Services
+                                    24/7</a></li>
+                            <li><a href="trucking.html" class="block px-4 py-2 hover:bg-[#E3A262]">Trucking Services</a>
+                            </li>
+                            <li><a href="construction.html" class="block px-4 py-2 hover:bg-[#E3A262]">General
+                                    Construction & Maintenance</a></li>
+                            <li><a href="auto-parts.html" class="block px-4 py-2 hover:bg-[#E3A262]">Auto Parts</a></li>
+                            <li><a href="heavy-equipment.html" class="block px-4 py-2 hover:bg-[#E3A262]">Heavy
+                                    Equipment Rental</a></li>
+                            <li><a href="furniture-hotel-residential.html"
+                                    class="block px-4 py-2 hover:bg-[#E3A262]">Furniture Hotel & Residential</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html" class="hover:text-[#E3A262]">About</a></li>
+                    <li><a href="contact.html" class="bg-[#E3A262] p-2 px-4 rounded-full text-[#ffffff]"><i
+                                class='bx bxs-phone' style='color:#ffffff'></i> Call Now</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden bg-[#1E1D1D] text-[#D6AB6C] py-4 px-6 absolute w-full left-0 top-full shadow-md">
+            <ul class="space-y-4">
+                <li class="relative">
+                    <button id="mobile-services-toggle"
+                        class="flex items-center justify-between w-full hover:text-[#E3A262]">
+                        Services<i class='bx bx-chevron-down ml-2'></i>
                     </button>
-                </form>
-            </div>
-            <div class="flex-shrink-0">
-                <nav>
-                    <ul class="flex space-x-6 text-[#D6AB6C]">
-                        <li class="relative group">
-                            <a href="services.html" class="active hover:text-[#E3A262]">Services<i class='bx bx-caret-down'
-                                    style="color:#e3a262"></i></a>
-                            <ul
-                                class="absolute right-0 w-[400px] hidden bg-[#1E1D1D] text-white shadow-md rounded-md group-hover:block">
-                                <li><a href="bridal-car.html" class="block px-4 py-2 hover:bg-[#E3A262] text-[#E3A262] hover:text-white">Bridal Car
-                                        Services</a></li>
-                                <li><a href="towing.html" class="block px-4 py-2 hover:bg-[#E3A262]">Towing Services 24/7</a>
-                                </li>
-                                <li><a href="trucking.html" class="block px-4 py-2 hover:bg-[#E3A262]">Trucking
-                                        Services</a></li>
-                                <li><a href="construction.html" class="block px-4 py-2 hover:bg-[#E3A262]">General
-                                        Construction & Maintenance</a></li>
-                                <li><a href="auto-parts.html" class="block px-4 py-2 hover:bg-[#E3A262]">Auto Parts</a>
-                                </li>
-                                <li><a href="heavy-equipment.html" class="block px-4 py-2 hover:bg-[#E3A262]">Heavy
-                                        Equipment Rental</a></li>
-                                <li><a href="furniture-hotel-residential.html"
-                                        class="block px-4 py-2 hover:bg-[#E3A262]">Furniture Hotel & Residential</a>
-                                </li>
-                            </ul>
+                    <ul id="mobile-services-menu" class="hidden space-y-2 pl-4">
+                        <li><a href="bridal-car.html" class="block hover:text-[#E3A262]">Bridal Car Services</a></li>
+                        <li><a href="towing.html" class="block hover:text-[#E3A262]">Towing Services 24/7</a></li>
+                        <li><a href="trucking.html" class="block hover:text-[#E3A262]">Trucking Services</a></li>
+                        <li><a href="construction.html" class="block hover:text-[#E3A262]">General Construction &
+                                Maintenance</a></li>
+                        <li><a href="auto-parts.html" class="block hover:text-[#E3A262]">Auto Parts</a></li>
+                        <li><a href="heavy-equipment.html" class="block hover:text-[#E3A262]">Heavy Equipment Rental</a>
                         </li>
-                        <li><a href="about.html" class="hover:text-[#E3A262]">About</a></li>
-                        <li><a href="contact.html" class="bg-[#E3A262] p-2 px-4 rounded-full text-[#ffffff]"><i class='bx bxs-phone' style='color:#ffffff' ></i> Call Now</a></li>
+                        <li><a href="furniture-hotel-residential.html" class="block hover:text-[#E3A262]">Furniture
+                                Hotel & Residential</a></li>
                     </ul>
-                </nav>
-            </div>
+                </li>
+                <li><a href="about.html" class="block hover:text-[#E3A262]">About</a></li>
+                <li><a href="contact.html"
+                        class="block bg-[#E3A262] p-2 px-4 rounded-full text-[#ffffff] text-center"><i
+                            class='bx bxs-phone' style='color:#ffffff'></i> Call Now</a></li>
+            </ul>
         </div>
     </header>
     <div class="h-[400px]"
@@ -81,7 +101,7 @@
         </nav>
         <h2 class="text-4xl font-bold text-center text-[#D6AB6C] mt-[20px]">Bridal Car Services</h2>
         <p
-            class="text-center text-white mt-10 mx-auto max-w-[80vw] bg-black rounded-lg bg-opacity-50 p-10 text-justify">
+            class="text-center text-white text-sm mt-5 mx-auto max-w-[80vw] bg-black rounded-lg bg-opacity-50 p-10 text-justify">
             Arrive in style and elegance on your special day with our premium bridal car services.
             We offer a fleet of luxurious, well-maintained vehicles, ensuring a grand entrance
             that will leave a lasting impression. Each vehicle is carefully prepared and decorated
@@ -96,114 +116,106 @@
 
         <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Car 1 -->
-            <div class="bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105">
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 flex flex-col">
                 <img src="img/1947-Jaguar-Mark-V.jpg" alt="1947 Jaguar Mark V" class="w-full h-500 object-cover">
-                <div class="p-6">
+                <div class="p-6 flex-grow">
                     <h3 class="text-2xl font-semibold text-[#1E1D1D] text-center">1947 Jaguar Mark V</h3>
                     <p class="text-[#1E1D1D] mt-2 text-center leading-relaxed">
-                        Experience the charm of the 1947 Jaguar Mark V, a stunning vintage masterpiece with elegant
-                        curves and luxurious interiors, perfect for your wedding.
+                        Experience the charm of the 1947 Jaguar Mark V, a stunning vintage masterpiece with elegant curves and luxurious interiors, perfect for your wedding.
                     </p>
                     <ul class="list-disc ml-11 font-bold mt-4 text-[13px] text-[#1E1D1D]">
                         <li>Classic British luxury with timeless appeal</li>
                         <li>Spacious and refined leather interiors</li>
                         <li>Elegant chrome details for a regal entrance</li>
                     </ul>
-                    <a href="contact.html"
-                        class="block bg-[#E3A262] text-center text-white py-3 mt-6 rounded-md hover:bg-[#d19c5b] transition-colors">
-                        Rent Now
-                    </a>
                 </div>
+                <a href="contact.html"
+                    class="block bg-[#E3A262] text-center text-white py-3 mt-auto mx-6 mb-6 rounded-md hover:bg-[#d19c5b] transition-colors">
+                    Rent Now
+                </a>
             </div>
-
+        
             <!-- Car 2 -->
-            <div class="bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105">
-                <img src="img/1947-Chrysler-Woody-Limousine-01.jpg" alt="1947 Chrysler Woody Limousine"
-                    class="w-full h-500 object-cover">
-                <div class="p-6">
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 flex flex-col">
+                <img src="img/1947-Chrysler-Woody-Limousine-01.jpg" alt="1947 Chrysler Woody Limousine" class="w-full h-500 object-cover">
+                <div class="p-6 flex-grow">
                     <h3 class="text-2xl font-semibold text-[#1E1D1D] text-center">1947 Chrysler Woody Limousine</h3>
                     <p class="text-[#1E1D1D] mt-2 text-center leading-relaxed">
-                        The 1947 Chrysler Woody Limousine combines vintage elegance with a unique wooden panel design,
-                        making it a rare and stylish choice for your big day.
+                        The 1947 Chrysler Woody Limousine combines vintage elegance with a unique wooden panel design, making it a rare and stylish choice for your big day.
                     </p>
                     <ul class="list-disc ml-11 font-bold mt-4 text-[13px] text-[#1E1D1D]">
                         <li>Authentic wood-panel craftsmanship</li>
                         <li>Spacious limousine comfort for a grand entrance</li>
                         <li>Perfect blend of vintage charm and sophistication</li>
                     </ul>
-                    <a href="contact.html"
-                        class="block bg-[#E3A262] text-center text-white py-3 mt-6 rounded-md hover:bg-[#d19c5b] transition-colors">
-                        Rent Now
-                    </a>
                 </div>
+                <a href="contact.html"
+                    class="block bg-[#E3A262] text-center text-white py-3 mt-auto mx-6 mb-6 rounded-md hover:bg-[#d19c5b] transition-colors">
+                    Rent Now
+                </a>
             </div>
-
+        
             <!-- Car 3 -->
-            <div class="bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105">
-                <img src="img/1956-Porsche-Convertible.jpg" alt="1956 Porsche Convertible"
-                    class="w-full h-500 object-cover">
-                <div class="p-6">
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 flex flex-col">
+                <img src="img/1956-Porsche-Convertible.jpg" alt="1956 Porsche Convertible" class="w-full h-500 object-cover">
+                <div class="p-6 flex-grow">
                     <h3 class="text-2xl font-semibold text-[#1E1D1D] text-center">1956 Porsche Convertible</h3>
                     <p class="text-[#1E1D1D] mt-2 text-center leading-relaxed">
-                        The 1956 Porsche Convertible offers a sleek and sporty yet classy design, making it a perfect
-                        wedding getaway car for couples who love style and speed.
+                        The 1956 Porsche Convertible offers a sleek and sporty yet classy design, making it a perfect wedding getaway car for couples who love style and speed.
                     </p>
                     <ul class="list-disc ml-11 font-bold mt-4 text-[13px] text-[#1E1D1D]">
                         <li>Iconic Porsche styling with vintage aesthetics</li>
                         <li>Soft-top convertible for a glamorous entrance</li>
                         <li>Elegant yet sporty for a unique wedding look</li>
                     </ul>
-                    <a href="contact.html"
-                        class="block bg-[#E3A262] text-center text-white py-3 mt-6 rounded-md hover:bg-[#d19c5b] transition-colors">
-                        Rent Now
-                    </a>
                 </div>
+                <a href="contact.html"
+                    class="block bg-[#E3A262] text-center text-white py-3 mt-auto mx-6 mb-6 rounded-md hover:bg-[#d19c5b] transition-colors">
+                    Rent Now
+                </a>
             </div>
-
+        
             <!-- Car 4 -->
-            <div class="bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105">
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 flex flex-col">
                 <img src="img/2022-Ford-Mustang-02.jpg" alt="2022 Ford Mustang" class="w-full h-500 object-cover">
-                <div class="p-6">
+                <div class="p-6 flex-grow">
                     <h3 class="text-2xl font-semibold text-[#1E1D1D] text-center">2022 Ford Mustang</h3>
                     <p class="text-[#1E1D1D] mt-2 text-center leading-relaxed">
-                        Add a modern touch to your wedding with the powerful and stylish 2022 Ford Mustang, blending
-                        luxury and performance for a striking entrance.
+                        Add a modern touch to your wedding with the powerful and stylish 2022 Ford Mustang, blending luxury and performance for a striking entrance.
                     </p>
                     <ul class="list-disc ml-11 font-bold mt-4 text-[13px] text-[#1E1D1D]">
                         <li>Bold and aggressive muscle car styling</li>
                         <li>Comfortable, high-tech interior with premium finishes</li>
                         <li>Powerful engine for a thrilling ride to the venue</li>
                     </ul>
-                    <a href="contact.html"
-                        class="block bg-[#E3A262] text-center text-white py-3 mt-6 rounded-md hover:bg-[#d19c5b] transition-colors">
-                        Rent Now
-                    </a>
                 </div>
+                <a href="contact.html"
+                    class="block bg-[#E3A262] text-center text-white py-3 mt-auto mx-6 mb-6 rounded-md hover:bg-[#d19c5b] transition-colors">
+                    Rent Now
+                </a>
             </div>
-
+        
             <!-- Car 5 -->
-            <div class="bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105">
-                <img src="img/2018-Mustang-Convertible._1.jpg" alt="2018 Mustang Convertible"
-                    class="w-full h-500 object-cover">
-                <div class="p-6">
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 flex flex-col">
+                <img src="img/2018-Mustang-Convertible._1.jpg" alt="2018 Mustang Convertible" class="w-full h-500 object-cover">
+                <div class="p-6 flex-grow">
                     <h3 class="text-2xl font-semibold text-[#1E1D1D] text-center">2018 Mustang Convertible</h3>
                     <p class="text-[#1E1D1D] mt-2 text-center leading-relaxed">
-                        Ride in style with the 2018 Mustang Convertible, offering a sleek open-top experience with the
-                        power and elegance of a modern American muscle car.
+                        Ride in style with the 2018 Mustang Convertible, offering a sleek open-top experience with the power and elegance of a modern American muscle car.
                     </p>
                     <ul class="list-disc ml-11 font-bold mt-4 text-[13px] text-[#1E1D1D]">
                         <li>Convertible roof for an open-air experience</li>
                         <li>Sporty design with a luxurious touch</li>
                         <li>Perfect for a stylish and unforgettable wedding arrival</li>
                     </ul>
-                    <a href="contact.html"
-                        class="block bg-[#E3A262] text-center text-white py-3 mt-6 rounded-md hover:bg-[#d19c5b] transition-colors">
-                        Rent Now
-                    </a>
                 </div>
+                <a href="contact.html"
+                    class="block bg-[#E3A262] text-center text-white py-3 mt-auto mx-6 mb-6 rounded-md hover:bg-[#d19c5b] transition-colors">
+                    Rent Now
+                </a>
             </div>
-
         </div>
+        
     </main>
 
     <footer class="bg-[#1E1D1D] text-[#D6AB6C] py-12">

@@ -19,53 +19,56 @@
 
 <body class="bg-[#DFE3E3]">
     <header class="bg-[#1E1D1D] text-white shadow-md py-4 sticky top-0 z-50">
-        <div class="container mx-auto flex items-center px-6">
+        <div class="container mx-auto flex items-center justify-between px-6">
             <div class="flex-shrink-0">
                 <a href="/" class="flex items-center space-x-4">
-                    <img id="logo" class="w-20 transition-all duration-300 ease-in-out" src="img/Penguin-Asia.png"
-                        alt="company-logo">
+                    <img id="logo" class="w-20 transition-all duration-300 ease-in-out" src="img/Penguin-Asia.png" alt="company-logo">
                     <h1 class="text-2xl font-bold text-[#E3A262] hidden lg:block">Penguin Sales & Services Company</h1>
                 </a>
             </div>
-            <div class="flex-grow hidden lg:block ms-[5vw] xl:ms-[15vw] me-auto">
-                <form class="flex ">
-                    <input type="text" placeholder="Search..."
-                        class="w-80 px-4 py-2 rounded-l-full text-[#1E1D1D] focus:outline-none">
-                    <button type="submit" class="bg-white px-4 py-2 rounded-r-full text-[#1E1D1D] hover:bg-[#D6AB6C]">
-                        <i class='bx bx-search text-xl'></i>
+            <button id="menu-toggle" class="lg:hidden text-[#D6AB6C] text-3xl">
+                <i class='bx bx-menu'></i>
+            </button>
+            <nav id="desktop-menu" class="hidden lg:flex space-x-6 text-[#D6AB6C]">
+                <ul class="flex space-x-6">
+                    <li class="relative group">
+                        <a href="services.html" class="hover:text-[#E3A262]">Services<i class='bx bx-caret-down' style="color:#e3a262"></i></a>
+                        <ul class="absolute right-0 w-96 hidden bg-[#1E1D1D] text-white shadow-md rounded-md group-hover:block">
+                            <li><a href="bridal-car.html" class="block px-4 py-2 hover:bg-[#E3A262]">Bridal Car Services</a></li>
+                            <li><a href="towing.html" class="block px-4 py-2 hover:bg-[#E3A262]">Towing Services 24/7</a></li>
+                            <li><a href="trucking.html" class="block px-4 py-2 hover:bg-[#E3A262]">Trucking Services</a></li>
+                            <li><a href="construction.html" class="block px-4 py-2 hover:bg-[#E3A262]">General Construction & Maintenance</a></li>
+                            <li><a href="auto-parts.html" class="block px-4 py-2 hover:bg-[#E3A262]">Auto Parts</a></li>
+                            <li><a href="heavy-equipment.html" class="block px-4 py-2 hover:bg-[#E3A262]">Heavy Equipment Rental</a></li>
+                            <li><a href="furniture-hotel-residential.html" class="block px-4 py-2 hover:bg-[#E3A262]">Furniture Hotel & Residential</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html" class="hover:text-[#E3A262]">About</a></li>
+                    <li><a href="contact.html" class="bg-[#E3A262] p-2 px-4 rounded-full text-[#ffffff]"><i class='bx bxs-phone' style='color:#ffffff'></i> Call Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden bg-[#1E1D1D] text-[#D6AB6C] py-4 px-6 absolute w-full left-0 top-full shadow-md">
+            <ul class="space-y-4">
+                <li class="relative">
+                    <button id="mobile-services-toggle" class="flex items-center justify-between w-full hover:text-[#E3A262]">
+                        Services<i class='bx bx-chevron-down ml-2'></i>
                     </button>
-                </form>
-            </div>
-            <div class="flex-shrink-0">
-                <nav>
-                    <ul class="flex space-x-6 text-[#D6AB6C]">
-                        <li class="relative group">
-                            <a href="services.html" class="hover:text-[#E3A262]">Services<i class='bx bx-caret-down'
-                                    style="color:#e3a262"></i></a>
-                            <ul
-                                class="absolute right-0 w-[400px] hidden bg-[#1E1D1D] text-white shadow-md rounded-md group-hover:block">
-                                <li><a href="bridal-car.html" class="block px-4 py-2 hover:bg-[#E3A262]">Bridal Car
-                                        Services</a></li>
-                                <li><a href="towing.html" class="block px-4 py-2 hover:bg-[#E3A262]">Towing Services 24/7</a>
-                                </li>
-                                <li><a href="trucking.html" class="block px-4 py-2 hover:bg-[#E3A262]">Trucking
-                                        Services</a></li>
-                                <li><a href="construction.html" class="block px-4 py-2 hover:bg-[#E3A262]">General
-                                        Construction & Maintenance</a></li>
-                                <li><a href="auto-parts.html" class="block px-4 py-2 hover:bg-[#E3A262]">Auto Parts</a>
-                                </li>
-                                <li><a href="heavy-equipment.html" class="block px-4 py-2 hover:bg-[#E3A262]">Heavy
-                                        Equipment Rental</a></li>
-                                <li><a href="furniture-hotel-residential.html"
-                                        class="block px-4 py-2 hover:bg-[#E3A262]">Furniture Hotel & Residential</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="about.html" class="hover:text-[#E3A262]">About</a></li>
-                        <li><a href="contact.html" class="bg-[#E3A262] p-2 px-4 rounded-full text-[#ffffff]"><i class='bx bxs-phone' style='color:#ffffff' ></i> Call Now</a></li>
+                    <ul id="mobile-services-menu" class="hidden space-y-2 pl-4">
+                        <li><a href="bridal-car.html" class="block hover:text-[#E3A262]">Bridal Car Services</a></li>
+                        <li><a href="towing.html" class="block hover:text-[#E3A262]">Towing Services 24/7</a></li>
+                        <li><a href="trucking.html" class="block hover:text-[#E3A262]">Trucking Services</a></li>
+                        <li><a href="construction.html" class="block hover:text-[#E3A262]">General Construction & Maintenance</a></li>
+                        <li><a href="auto-parts.html" class="block hover:text-[#E3A262]">Auto Parts</a></li>
+                        <li><a href="heavy-equipment.html" class="block hover:text-[#E3A262]">Heavy Equipment Rental</a></li>
+                        <li><a href="furniture-hotel-residential.html" class="block hover:text-[#E3A262]">Furniture Hotel & Residential</a></li>
                     </ul>
-                </nav>
-            </div>
+                </li>
+                <li><a href="about.html" class="block hover:text-[#E3A262]">About</a></li>
+                <li><a href="contact.html" class="block bg-[#E3A262] p-2 px-4 rounded-full text-[#ffffff] text-center"><i class='bx bxs-phone' style='color:#ffffff'></i> Call Now</a></li>
+            </ul>
         </div>
     </header>
 
